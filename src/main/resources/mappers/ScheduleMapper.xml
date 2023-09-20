@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.atguigu.mapper.ScheduleMapper">
+    <insert id="addSchedule">
+        INSERT INTO t_schedule (title,completed) VALUES (#{title},#{completed})
+    </insert>
+    <update id="updateSchedule">
+        UPDATE t_schedule SET title = #{title},completed = #{completed} WHERE id = #{id}
+    </update>
+    <delete id="deleteScheduleById">
+        DELETE FROM t_schedule WHERE id = #{id}
+    </delete>
+
+    <select id="findAll" resultType="com.atguigu.pojos.Schedule">
+        SELECT * FROM t_schedule
+    </select>
+    <select id="findScheduleListByCompleted" resultType="com.atguigu.pojos.Schedule">
+        SELECT * FROM t_schedule WHERE completed = #{completed}
+    </select>
+</mapper>

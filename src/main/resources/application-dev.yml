@@ -1,0 +1,19 @@
+#1. 配置数据源信息
+spring:
+  datasource:
+    username: root
+    password: 12345678
+    url: jdbc:mysql://localhost:3306/atguigu?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+#4. 服务器配置
+server:
+  port: 8080
+  servlet:
+    context-path: /ssm
+  address: localhost
+
+#5. 启动统计执行时长
+invoke:
+  time:
+    enabled: false

@@ -1,0 +1,20 @@
+#1. 配置数据源信息
+spring:
+  datasource:
+    username: root
+    password: 12345678
+    url: jdbc:mysql://localhost:3306/atguigu?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+#3. 日志
+logging:
+  level:
+    com.atguigu.mapper: warn
+
+#4. 服务器配置
+server:
+  port: 8888
+  servlet:
+    context-path: /ssm
+  address: localhost
